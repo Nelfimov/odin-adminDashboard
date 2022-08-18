@@ -1,0 +1,89 @@
+@font-face {
+  font-family: roboto;
+  src: url(https://fonts.google.com/download?family=Roboto);
+}
+
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'roboto', sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 50px 100px 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 5px;
+  grid-template-areas:
+    'dashboard header header'
+    'dashboard navbar navbar'
+    'dashboard main main';
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+/* DASHBOARD */
+
+.dashboard {
+  grid-area: dashboard;
+  background-color: blue;
+  display: grid;
+  grid-auto-flow: row;
+  align-content: flex-start;
+  color: white;
+  padding: 10px;
+}
+
+.dashboard div.logo {
+  color: white;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: start;
+}
+
+span.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.dashboard img.logo {
+  height: 50px;
+  width: 50px;
+  filter: invert();
+}
+
+.dashboard ul img.icon {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  top: 7px;
+}
+
+/* HEADER */
+
+.header {
+  grid-area: header;
+  background-color: orange;
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: green;
+}
+
+.main {
+  grid-area: main;
+  background-color: black;
+}
