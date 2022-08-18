@@ -29,7 +29,7 @@ li {
   list-style: none;
   font-size: 1.4rem;
   font-weight: bold;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 /* DASHBOARD */
@@ -69,6 +69,7 @@ span.logo {
   width: 30px;
   position: relative;
   top: 7px;
+  filter: invert();
 }
 
 /* HEADER */
