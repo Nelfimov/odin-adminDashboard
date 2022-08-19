@@ -14,7 +14,6 @@ body {
   display: grid;
   grid-template-rows: 50px 100px 1fr;
   grid-template-columns: 1fr 3fr 1fr;
-  gap: 5px;
   grid-template-areas:
     'dashboard header header'
     'dashboard navbar navbar'
@@ -36,7 +35,7 @@ li {
 
 .dashboard {
   grid-area: dashboard;
-  background-color: blue;
+  background-color: #1dadf5;
   display: grid;
   grid-auto-flow: row;
   align-content: flex-start;
@@ -64,7 +63,7 @@ span.logo {
   filter: invert();
 }
 
-.dashboard ul img.icon {
+img.icon {
   height: 30px;
   width: 30px;
   position: relative;
@@ -76,15 +75,203 @@ span.logo {
 
 .header {
   grid-area: header;
-  background-color: orange;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  align-content: center;
+  padding: 20px;
 }
+
+.header img.icon,
+.main img.icon {
+  filter: invert()invert();
+  top: 0;
+}
+
+.header div.search {
+  display: grid;
+  grid-template-columns: 1fr 15fr;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.header .search input {
+  width: auto;
+  height: 30px;
+  background-color: whitesmoke;
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+
+.header div.right {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  gap: 30px;
+  justify-content: end;
+}
+
+img.profile {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+/* NAVBAR */
 
 .navbar {
+  position: relative;
   grid-area: navbar;
-  background-color: green;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  border-bottom: 2px solid grey;
+  box-shadow: 0px 5px 5px grey;
 }
 
-.main {
+.navbar .left {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  gap: 20px;
+  padding-left: 10px;
+}
+
+.navbar .left span {
+  font-weight: bold;
+}
+
+.navbar .left span:first-child {
+  font-size: 0.9rem;
+}
+
+.navbar .left span.username {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navbar .left img.profile {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+}
+
+.navbar .right {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: min-content min-content min-content;
+  justify-content: end;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.navbar .right button {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #0e7cb5;
+  color: white;
+  font-weight: bold;
+  border: 0
+}
+
+/* MAIN */
+
+div.main {
   grid-area: main;
-  background-color: black;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: min-content min-content;
+  grid-template-areas:
+    'projects announcements'
+    'projects trending';
+  background-color: #e8e7e6;
+  gap: 15px;
+  padding: 15px 15px 0 15px;
+}
+
+div.main div.projects {
+  grid-area: projects;
+}
+
+div.main div.projects div.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 25px;
+}
+
+div.main .cards .card {
+  background-color: white;
+  border-left: 10px solid orange;
+  padding: 20px;
+  border-radius: 10px;
+  height: 150px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  box-shadow: 2px 2px 2px grey;
+}
+
+.card div.social-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  justify-content: end;
+  justify-min-content min-content
+}
+
+div.social-buttons img {
+  padding-left: 30px;
+}
+
+div.main div.announcements {
+  grid-area: announcements;
+}
+
+div.main div.announcements>div {
+  background-color: white;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fill, minmax(3uto, 1fr));
+  justify-content: space-evenly;
+  justify-items: stretch;
+  box-shadow: 2px 2px 2px grey;
+  padding: 15px;
+}
+
+div.main div.trending {
+  grid-area: trending;
+}
+
+div.main div.trending>div {
+  background-color: white;
+  box-shadow: 2px 2px 2px grey;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fill, minmax(3uto, 1fr));
+  justify-content: space-evenly;
+  justify-items: stretch;
+  padding: 15px;
+  gap: 15px;
+}
+
+div.trending div.trends {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content;
+  gap: 15px;
+}
+
+div.trending div.trends>div {
+  display: grid;
+
+}
+
+span.username {
+  font-weight: bold;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: auto;
 }

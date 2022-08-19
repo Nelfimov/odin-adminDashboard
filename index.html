@@ -11,6 +11,7 @@
   </head>
 
   <body>
+
     <div class="dashboard">
       <div class="logo">
         <img class="logo" src="static/collage.svg" alt="logo">
@@ -32,18 +33,26 @@
     </div>
 
     <div class="header">
-      <input type="text" name="search" id="search">
+      <div class="search">
+        <img class="icon" src="static/magnify.svg" alt="search icon">
+        <input type="text" name="search" id="search">
+      </div>
       <div class="right">
-        <span class="notifications">BELL</span>
-        <img src="" alt="profile-pic">
+        <img class="icon" src="static/bell-ring.svg" alt="notification">
+        <img class="profile" src="static/Profile.jpg" alt="profile-pic">
         <span class="username">Morgan Oakley</span>
       </div>
     </div>
 
     <div class="navbar">
-      <img src="" alt="profile-pic">
-      <span>Hi there,</span>
-      <span class="username">Morgan Oakley (@morgan)</span>
+      <div class="left">
+        <img class="profile" src="static/Profile.jpg" alt="profile-pic">
+        <div>
+          <span>Hi there,</span>
+          <br>
+          <span class="username">Morgan Oakley (@morgan)</span>
+        </div>
+      </div>
       <div class="right">
         <button class="navlink">New</button>
         <button class="navlink">Upload</button>
@@ -52,10 +61,118 @@
     </div>
 
     <div class="main">
-      <div class="projects"></div>
-      <div class="announcements"></div>
-      <div class="trending"></div>
+      <div class="projects">
+        <h2>Your projects</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Some title</h3>
+            <p>This is some text inside card</p>
+            <div class="social-buttons">
+              <img class="icon" src="static/star-plus-outline.svg" alt="add to favorites">
+              <img class="icon" src="static/eye-plus.svg" alt="unsee">
+              <img class="icon" src="static/share-variant.svg" alt="share">
+            </div>
+          </div>
+          <div class="card">
+            <h3>Some title</h3>
+            <p>This is some text inside card</p>
+            <div class="social-buttons">
+              <img class="icon" src="static/star-plus-outline.svg" alt="add to favorites">
+              <img class="icon" src="static/eye-plus.svg" alt="unsee">
+              <img class="icon" src="static/share-variant.svg" alt="share">
+            </div>
+          </div>
+          <div class="card">
+            <h3>Some title</h3>
+            <p>This is some text inside card</p>
+            <div class="social-buttons">
+              <img class="icon" src="static/star-plus-outline.svg" alt="add to favorites">
+              <img class="icon" src="static/eye-plus.svg" alt="unsee">
+              <img class="icon" src="static/share-variant.svg" alt="share">
+            </div>
+          </div>
+          <div class="card">
+            <h3>Some title</h3>
+            <p>This is some text inside card</p>
+            <div class="social-buttons">
+              <img class="icon" src="static/star-plus-outline.svg" alt="add to favorites">
+              <img class="icon" src="static/eye-plus.svg" alt="unsee">
+              <img class="icon" src="static/share-variant.svg" alt="share">
+            </div>
+          </div>
+          <div class="card">
+            <h3>Some title</h3>
+            <p>This is some text inside card</p>
+            <div class="social-buttons">
+              <img class="icon" src="static/star-plus-outline.svg" alt="add to favorites">
+              <img class="icon" src="static/eye-plus.svg" alt="unsee">
+              <img class="icon" src="static/share-variant.svg" alt="share">
+            </div>
+          </div>
+          <div class="card">
+            <h3>Some title</h3>
+            <p>This is some text inside card</p>
+            <div class="social-buttons">
+              <img class="icon" src="static/star-plus-outline.svg" alt="add to favorites">
+              <img class="icon" src="static/eye-plus.svg" alt="unsee">
+              <img class="icon" src="static/share-variant.svg" alt="share">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="announcements">
+        <h2>Announcements</h2>
+        <div>
+          <div class="announce">
+            <h3>Site maintanance</h3>
+            <p>We are undergoing site maintanance</p>
+          </div>
+          <hr>
+          <div class="announce">
+            <h3>Site maintanance</h3>
+            <p>We are undergoing site maintanance</p>
+          </div>
+          <div class="announce">
+            <h3>Site maintanance</h3>
+            <p>We are undergoing site maintanance</p>
+          </div>
+        </div>
+      </div>
+      <div class="trending">
+        <h2>Trending</h2>
+        <div>
+          <div class="trends">
+            <img class="profile" src="static/Profile2.jpg" alt="profile-pic">
+            <div>
+              <span class="username">@tegan</span>
+              <span>World peace Builder</span>
+            </div>
+          </div>
+          <div class="trends">
+            <img class="profile" src="static/Profile3.png" alt="profile-pic">
+            <div>
+              <span class="username">@tegan</span>
+              <span>World peace Builder</span>
+            </div>
+          </div>
+          <div class="trends">
+            <img class="profile" src="static/Profile4.jpg" alt="profile-pic">
+            <div>
+              <span class="username">@tegan</span>
+              <span>World peace Builder</span>
+            </div>
+          </div>
+          <div class="trends">
+            <img class="profile" src="static/Profile.jpg" alt="profile-pic">
+            <div>
+              <span class="username">@morgan</span>
+              <span>Super cool project</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
   </body>
 
 </html>
